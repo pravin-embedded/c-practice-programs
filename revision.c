@@ -1,0 +1,6 @@
+#include<stdio.h>
+int main()
+{
+    char c = 'A';
+    printf("%d %c", c, c+2);
+}

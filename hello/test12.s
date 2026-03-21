@@ -1,0 +1,100 @@
+	.file	"test12.c"
+	.text
+	.section	.rodata
+.LC0:
+	.string	"Inside the f0"
+.LC1:
+	.string	"Middle of the main"
+	.text
+	.globl	f0
+	.type	f0, @function
+f0:
+.LFB6:
+	.cfi_startproc
+	endbr64
+	pushq	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset 6, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register 6
+	leaq	.LC0(%rip), %rax
+	movq	%rax, %rdi
+	call	puts@PLT
+	call	f1
+	leaq	.LC1(%rip), %rax
+	movq	%rax, %rdi
+	call	puts@PLT
+	call	f2
+	movl	$0, %edi
+	call	exit@PLT
+	.cfi_endproc
+.LFE6:
+	.size	f0, .-f0
+	.section	.rodata
+.LC2:
+	.string	"f1 is opened"
+	.text
+	.globl	f1
+	.type	f1, @function
+f1:
+.LFB7:
+	.cfi_startproc
+	endbr64
+	pushq	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset 6, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register 6
+	leaq	.LC2(%rip), %rax
+	movq	%rax, %rdi
+	call	puts@PLT
+	nop
+	popq	%rbp
+	.cfi_def_cfa 7, 8
+	ret
+	.cfi_endproc
+.LFE7:
+	.size	f1, .-f1
+	.section	.rodata
+.LC3:
+	.string	"from f2..."
+	.text
+	.globl	f2
+	.type	f2, @function
+f2:
+.LFB8:
+	.cfi_startproc
+	endbr64
+	pushq	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset 6, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register 6
+	leaq	.LC3(%rip), %rax
+	movq	%rax, %rdi
+	call	puts@PLT
+	nop
+	popq	%rbp
+	.cfi_def_cfa 7, 8
+	ret
+	.cfi_endproc
+.LFE8:
+	.size	f2, .-f2
+	.ident	"GCC: (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0"
+	.section	.note.GNU-stack,"",@progbits
+	.section	.note.gnu.property,"a"
+	.align 8
+	.long	1f - 0f
+	.long	4f - 1f
+	.long	5
+0:
+	.string	"GNU"
+1:
+	.align 8
+	.long	0xc0000002
+	.long	3f - 2f
+2:
+	.long	0x3
+3:
+	.align 8
+4:
