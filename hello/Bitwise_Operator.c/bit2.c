@@ -1,7 +1,9 @@
 #include<stdio.h>
 int main()
 {
-	int a =45, b= 21;
-	printf("%d", a|b);
+	int x;
+	scanf("%d", &x);
+	//printf("Modified x is %d",(x | (1<1)));
+	printf("Modified x is %d",(x ^ (1<3)));
+	//printf("Modified x is %d",(x & ~(1<0)));
 }
-
