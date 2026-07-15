@@ -1,0 +1,51 @@
+# Compiled C output
+*.o
+*.out
+a.out
+
+# Generated and editor files
+*.i
+*.swp
+.vscode/
+c_programs/file_handling/data.txt
+
+# Local drafts and empty starter files
+Practice/array.c
+Practice/binary_int.c
+Practice/data.c
+Practice/Str1.c
+Practice/reverse.c
+c_programs/control_flow/loops/npalindrome.c
+c_programs/control_flow/conditionals/project_1.c
+c_programs/functions/x.c
+c_programs/strings/DBarray.c
+c_programs/strings/maskstr.c
+c_programs/strings/mystrncmp.c
+c_programs/strings/mystrrev.c
+c_programs/strings/revstring_all.c
+
+# Prompt-style exercise drafts kept only locally
+Practice/prime.c
+c_programs/arrays/one_dimensional/2ndhighest.c
+c_programs/arrays/one_dimensional/leftrotate.c
+c_programs/arrays/one_dimensional/repremov.c
+c_programs/bitwise/algorithms/pow2bit.c
+c_programs/control_flow/conditionals/highestnum.c
+c_programs/control_flow/conditionals/triangle.c
+c_programs/control_flow/loops/count.c
+c_programs/control_flow/loops/even_rev.c
+c_programs/control_flow/loops/palindrome.c
+c_programs/control_flow/loops/rev.c
+c_programs/control_flow/loops/strongnum.c
+c_programs/control_flow/loops/sumofdigits.c
+c_programs/control_flow/loops/gemincpalindrome.c
+c_programs/functions/alternateprime.c
+c_programs/functions/only5.c
+c_programs/functions/primesum.c
+c_programs/language_features/preprocessor/DEBUG.c
+c_programs/pointers/cnteven.c
+c_programs/pointers/max.c
+c_programs/pointers/prleft.c
+c_programs/pointers/reverse.c
+c_programs/pointers/square.c
+c_programs/pointers/sum.c
